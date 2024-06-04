@@ -1,3 +1,6 @@
+// simple notification service using Node.js and Express.js 
+// Selected a specific use case for the notification service, such as: 
+// Basic email sending functionality 
 const express = require("express");
 const app = express();
 let PORT = 5000;
@@ -8,7 +11,7 @@ app.get("/", (req, res) => {
   res.send("I am a server");
 });
 
-app.get("/mail", sendMail);
+app.get("/sendmail", sendMail);
 
 const start = async () => {
   try {
